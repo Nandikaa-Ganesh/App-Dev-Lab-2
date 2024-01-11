@@ -1,0 +1,143 @@
+/* Backgrounds */
+body {
+    background-color: #f4f4f4;
+}
+
+/* Borders */
+.container {
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+/* Margins */
+h1, p {
+    margin-bottom: 10px;
+}
+
+/* Padding */
+.container {
+    padding: 20px;
+}
+
+/* Height, Width */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Box Model */
+.container {
+    box-sizing: border-box;
+}
+
+/* Outline */
+.container {
+    outline: 2px dashed #999;
+    outline-offset: 10px;
+}
+
+/* Text */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Font */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Icons */
+i {
+    font-style: normal;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Navigation bar */
+ul {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Image Gallery */
+.container img {
+    width: 30%;
+    margin: 5px;
+}
+
+/* Image Sprites */
+.sprite {
+    background-image: url('sprites.png');
+    width: 50px;
+    height: 50px;
+}
+
+/* Attribute Selectors */
+input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Forms */
+form {
+    max-width: 300px;
+}
+
+/* Counters */
+.container::before {
+    counter-reset: section;
+}
+
+h1::before {
+    counter-increment: section;
+    content: "Section " counter(section) ": ";
+}

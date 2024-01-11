@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.item-card {
+    border: 1px solid #ddd;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+}
+
+.item-card img {
+    width: 100%;
+    height: auto;
+}
+
+.item-details {
+    padding: 10px;
+}
+
+.item-details h3 {
+    margin-top: 0;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+}
+
+.detailed-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.detailed-view img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}

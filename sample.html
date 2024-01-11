@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Equipment Rental</title>
+    <style>
+        body {
+            font-family: 'Inter regular', tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0c6b52d1;
+            color: antiquewhite;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: antiquewhite;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgb(172, 255, 139);
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0c6b52d1;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        th, td {
+        border: 1px solid black;}
+
+        h2{
+            color: rgb(24, 80, 3);
+        }
+      
+      ul{
+  list-style-type: circle;
+}
+      </style>
+</head>
+<body>
+
+    <!-- Document Tags -->
+    <header>
+        <h1>Agricultural Equipment Rental</h1>
+        <p style="font-weight: bold;">Providing the tools you need for successful farming.</p>
+    </header>
+<hr>
+    <!-- Navigation Bar (Grouping Tags) -->
+    <nav>
+        <a href="#equipment"><h2>Equipment</a> <br> <hr><br>
+        <a href="#techniques">Techniques</a> <br><hr><br>
+        <a href="#contact">Contact</a> <br><hr></h2>
+    </nav>
+    <hr>
+
+    <!-- Equipment Section -->
+    <section id="equipment">
+        <h2 style="color: rgb(24, 80, 3)">Available Equipment for Rent</h2>
+        <!-- Unordered List (Text-level Flow Tags) -->
+        <ul><dd>
+            <li>Tractor - Model XYZ</li>
+            <li>Harvester - Model ABC</li>
+            <li>Plow - Model DEF</li>
+        </dd>
+            <!-- Add more equipment items as needed -->
+        </ul>
+        <hr>
+        <!-- Definition List (Text-level Flow Tags) -->
+        <h2>Equipment Details</h2>
+        <dl>
+            <dt><h3>Tractor</h3></dt>
+            <dd>Agricultural vehicle used for various tasks.</dd>
+            <dt><h3>Harvester</h3></dt>
+            <dd>Machine for harvesting crops.</dd>
+            <dt><h3>Plough</h3></dt>
+            <dd>Instrument for breaking and turning soil.</dd>
+            <!-- Add more equipment details as needed -->
+        </dl>
+
+        <!-- Table (Table Tags) -->
+        <h2>Equipment Rental Rates</h2>
+        <table style="border: 2px solid black; font: size 50px;">
+            <thead>
+                <tr>
+                    <th>Equipment</th>
+                    <th>1 Day</th>
+                    <th>1 Week</th>
+                    <th>1 Month</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tractor</td>
+                    <td>$100</td>
+                    <td>$500</td>
+                    <td>$2000</td>
+                </tr>
+                <tr>
+                    <td>Harvester</td>
+                    <td>$150</td>
+                    <td>$800</td>
+                    <td>$3000</td>
+                </tr>
+                <tr>
+                    <td>Plow</td>
+                    <td>$50</td>
+                    <td>$300</td>
+                    <td>$1200</td>
+                </tr>
+                <!-- Add more equipment rows as needed -->
+            </tbody>
+        </table>
+    </section>
+    <br><hr>
+    <!-- Techniques Section -->
+    <section id="techniques">
+        <h2>New Techniques in Agriculture</h2>
+        <p>Stay informed about modern agricultural techniques and practices to enhance your yield.</p>
+       <h3> <ol>
+            <li>Precision Farming</li>
+            <li>Vertical Farming</li>
+            <li>Drones in Agriculture</li>
+            <!-- Add more techniques as needed -->
+        </ol>
+    </h3>
+    </section>
+<hr>
+   <!-- Contact Section -->
+   <!-- Contact Section -->
+<section id="contact" style="margin-top: 20px;">
+    <h2>Contact Us for Rental Inquiries</h2>
+    <form action="/submit_inquiry" method="post">
+        <label for="name" style="display: block; margin-bottom: 10px;">Your Name:</label>
+        <input type="text" id="name" name="name" style="width: 100%; padding: 8px; box-sizing: border-box;" required>
+<br><br>
+        <label for="email" style="display: block; margin-bottom: 10px;">Your Email:</label>
+        <input type="email" id="email" name="email" style="width: 100%; padding: 8px; box-sizing: border-box;" required>
+        <br><br>
+        <label for="equipment" style="display: block; margin-bottom: 10px;">Equipment of Interest:</label>
+        <select id="equipment" name="equipment" style="width: 100%; padding: 8px; box-sizing: border-box;">
+            <option value="tractor">Tractor</option>
+            <option value="harvester">Harvester</option>
+            <option value="plow">Plow</option>
+        </select>
+        <br><br>
+        <label for="message" style="display: block; margin-bottom: 10px;">Additional Message:</label>
+        <textarea id="message" name="message" rows="4" style="width: 100%; padding: 8px; box-sizing: border-box;" required></textarea>
+        <br><br>
+        <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">Submit Inquiry</button>
+    
+    </form>
+</section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact us at <a href="mailto:info@agrirental.com">info@agrirental.com</a></p>
+        <p>&copy; 2023 Agriculture Equipment Rental</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+

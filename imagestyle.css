@@ -1,0 +1,139 @@
+#info{
+    background-image: url("field1.jpg");
+}
+
+#header{
+    height: 200px;
+    width: 100%;
+    font-weight: 600;
+    font-family: 'Inter', Courier, monospace;
+    background-color: rgb(28, 70, 31);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+    font-family: 'Lora', tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(equipverti.jpg);
+}
+
+header {
+    background-color: #053825c4;
+    color: rgb(221, 187, 125);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #c6a869c4;
+    color: rgb(83, 50, 7);
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px; 
+    text-decoration: none; 
+    border-radius: 30px;
+}
+
+nav a:hover {
+    background-color: rgb(83, 50, 7);
+    color: #c6a869c4;
+}
+
+nav a {
+    color: rgb(83, 50, 7);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #3a4d39e1;
+    color: rgb(221, 187, 125);
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(238, 228, 228, 0.5);
+}
+
+h2 {
+    color: rgb(221, 187, 125);
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #053825c4;
+    color: rgb(221, 187, 125);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image-container {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}

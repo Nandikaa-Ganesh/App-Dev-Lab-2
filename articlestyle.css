@@ -1,0 +1,186 @@
+#info{
+    background-image: url("field1.jpg");
+}
+
+/*header stylings*/
+
+#header{
+    height: 200px;
+    width: 100%;
+    font-weight: 600;
+    font-family: 'Inter', Courier, monospace;
+    background-color: rgb(28, 70, 31);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+    font-family: 'Lora', tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(equipverti.jpg);
+}
+
+header {
+    background-color: #053825c4;
+    color: rgb(221, 187, 125);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    
+    background-color: #c6a869c4;
+    color: rgb(83, 50, 7);
+    text-align: center;
+}
+
+nav a {
+    display:inline;
+    padding: 10px; 
+    text-decoration: none; 
+    border-radius: 30px;
+}
+
+nav a:hover {
+    background-color: rgb(83, 50, 7);
+    color: #c6a869c4;
+}
+
+nav a {
+    color: rgb(83, 50, 7);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #3a4d39e1;
+    color: rgb(221, 187, 125);
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(238, 228, 228, 0.5);
+}
+
+h2 {
+    color: rgb(221, 187, 125);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #053825c4;
+    color: rgb(221, 187, 125);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #533e16c4;
+    color: white;
+}
+th, td {
+border: 1px solid black;}
+
+ul{
+list-style-type: circle;
+}
+
+.card {
+margin: 20px;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+background-color: #c6a869c4;
+color: rgb(83, 50, 7);
+transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+.card img {
+width: 100px;
+border-radius: 4px;
+margin-bottom: 10px;
+}
+
+.card h2 {
+color: rgb(83, 50, 7);
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.card p {
+font-size: 14px;
+color: rgb(83, 50, 7);
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid #4CAF50; /* Change border color on focus */
+}
+
+button {
+    background-color: #010f02;
+    color: rgb(177, 148, 19);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-family: 'lora', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #d4cf37b3;
+    color: #291b03; /* Change text color on hover */
+}

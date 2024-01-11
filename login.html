@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Sign Up</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      width: 400px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      color: #555;
+      background-color: #eee;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s;
+    }
+
+    .tab:hover {
+      background-color: #ddd;
+    }
+
+    .tab.active {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-group button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+    .not-found-card {
+      display: none;
+      background-color: rgba(255, 0, 0, 0.1);
+      border: 1px solid #f00;
+      border-radius: 4px;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('login')">Login</button>
+    <button class="tab" onclick="showTab('signup')">Sign Up</button>
+  </div>
+
+  <div id="loginTab" class="form-group">
+    <!-- Login form inputs -->
+    <label for="loginUsername">Username:</label>
+    <input type="text" id="loginUsername" placeholder="Enter your username">
+
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" placeholder="Enter your password">
+
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="signupTab" class="form-group" style="display: none;">
+    <label for="signupName">Name:</label>
+    <input type="text" id="signupName" placeholder="Enter your name">
+
+    <label for="signupEmail">Email:</label>
+    <input type="email" id="signupEmail" placeholder="Enter your email">
+
+    <label for="signupPassword">Password:</label>
+    <input type="password" id="signupPassword" placeholder="Enter your password">
+
+    <label for="signupPhone">Phone Number:</label>
+    <input type="tel" id="signupPhone" placeholder="Enter your phone number">
+
+    <label for="signupLocation">Location - City and State:</label>
+    <input type="text" id="signupLocation" placeholder="Enter your location">
+
+    <label for="signupAge">Age:</label>
+    <input type="number" id="signupAge" placeholder="Enter your age">
+
+    <label for="signupGender">Gender:</label>
+    <select id="signupGender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <button onclick="signup()">Sign Up</button>
+  </div>
+  <div id="notFoundCard" class="not-found-card">
+    <p>Username and password not found.</p>
+    <button onclick="hideNotFoundCard()">Back</button>
+  </div>
+</div>
+
+<script>
+    // Simulated user data stored in a CSV format
+    const userDataCSV = `JohnDoe,john@example.com,password123,1234567890,New York,NY,25,male
+  JaneSmith,jane@example.com,pass456,9876543210,San Francisco,CA,28,female`;
+  
+    function showTab(tabName) {
+      if (tabName === 'login') {
+        document.getElementById('loginTab').style.display = 'block';
+        document.getElementById('signupTab').style.display = 'none';
+        document.querySelector('.tab.login').classList.add('active');
+        document.querySelector('.tab.signup').classList.remove('active');
+      } else {
+        document.getElementById('loginTab').style.display = 'none';
+        document.getElementById('signupTab').style.display = 'block';
+        document.querySelector('.tab.login').classList.remove('active');
+        document.querySelector('.tab.signup').classList.add('active');
+      }
+    }
+  
+    function login() {
+      const username = document.getElementById('loginUsername').value;
+      const password = document.getElementById('loginPassword').value;
+  
+      if (username && password) {
+        const userDataArray = userDataCSV.split('\n');
+        let found = false;
+  
+        for (const userData of userDataArray) {
+          const [storedUsername, email, storedPassword] = userData.split(',');
+  
+          if (username === storedUsername && password === storedPassword) {
+            found = true;
+            alert(`Login successful!\nUsername: ${username}`);
+            break;
+          }
+        }
+  
+        if (!found) {
+          document.getElementById('notFoundCard').style.display = 'block';
+        }
+      } else {
+        alert('Please enter both username and password.');
+      }
+    }
+  
+    function signup() {
+      // Simulate signup logic
+      const name = document.getElementById('signupName').value;
+      const email = document.getElementById('signupEmail').value;
+      const password = document.getElementById('signupPassword').value;
+      const phone = document.getElementById('signupPhone').value;
+      const location = document.getElementById('signupLocation').value;
+      const age = document.getElementById('signupAge').value;
+      const gender = document.getElementById('signupGender').value;
+  
+      if (name && email && password && phone && location && age && gender) {
+        // Simulate storing data in a CSV file (for learning purposes)
+        const userData = `${name},${email},${password},${phone},${location},${age},${gender}\n`;
+  
+        // Append the new user data to the existing CSV data
+        userDataCSV += userData;
+  
+        alert('Sign Up successful!\nThe user data has been added to the CSV file.');
+      } else {
+        alert('Please fill in all the fields.');
+      }
+    }
+  
+    function hideNotFoundCard() {
+      document.getElementById('notFoundCard').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
